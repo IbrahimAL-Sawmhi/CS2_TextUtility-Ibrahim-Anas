@@ -13,3 +13,9 @@ void convert_Toupper(char arr[]);
 void convert_Tolower(char arr[]);
 void reverse_string(char arr[]);
 
+// The bouns task
+const int MAX_LENGTH = 1000;
+
+void repeatKeyword(char keyword[], char repeated[], int length);
+void encrypt(char plaintext[],char keyword[], char ciphertext[]);
+void decrypt(char ciphertext[], char keyword[], char plaintext[]);
