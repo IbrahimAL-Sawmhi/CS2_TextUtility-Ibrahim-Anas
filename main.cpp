@@ -42,5 +42,25 @@ int main()
     reverse_string(text9);
     cout << "Reversed string (should be esreveR): " << text9 << endl;
 
+
+    
+    //Bonus Task 
+    char plaintext[MAX_LENGTH];
+    char keyword[MAX_LENGTH];
+    char cipher[MAX_LENGTH];
+    char decrypted[MAX_LENGTH];
+
+   cout << "Enter plaintext (lowercase only): ";
+   cin.getline(plaintext, MAX_LENGTH);
+
+   cout << "Enter keyword (lowercase only): ";
+   cin.getline(keyword, MAX_LENGTH);
+
+   encrypt(plaintext, keyword, cipher);
+   cout << "Encrypted text: " << cipher << endl;
+
+   decrypt(cipher, keyword, decrypted);
+   cout << "Decrypted text: " << decrypted << endl;
+
     return 0;
 }

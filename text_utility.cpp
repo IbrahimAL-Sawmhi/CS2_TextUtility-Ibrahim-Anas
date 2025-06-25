@@ -173,7 +173,7 @@ void reverse_string(char arr[])
     int end = strlen(arr) - 1;
     int temp = 0;
 
-    while (start < end)
+   while (start < end)
     {
         temp = arr[start];
         arr[start] = arr[end];
@@ -182,4 +182,54 @@ void reverse_string(char arr[])
         start++;
         end--;
     }
+
+
+}
+
+const int MAX_LENGTH = 1000;
+
+void repeatKeyword(char keyword[], char repeat[], int length)
+{
+    int keyLen = strlen(keyword);
+    for(int i =0; i < length; i++)
+    {
+        repeat[i] = keyword[i % keyLen];
+    }
+    repeat[length] = '\0';
+}
+
+void encrypt(char plaintext[], char keyword[], char cipher[])
+{
+    int len = strlen(plaintext);
+    char repeat[MAX_LENGTH];
+    repeatKeyword(keyword, repeat, len);
+
+    for (int i = 0; i < len; i++) {
+        if (plaintext[i] >= 'a' && plaintext[i] <= 'z') {
+            int p = plaintext[i] - 'a';
+            int k = repeat[i] - 'a';
+            cipher[i] = (p + k) % 26 + 'a';
+        } else {
+            cipher[i] = plaintext[i];
+        }
+    }
+    cipher[len] = '\0';
+}
+
+void decrypt(char cipher[], char keyword[], char plaintext[]) {
+    int len = strlen(cipher);
+    char repeatedKey[MAX_LENGTH];
+    repeatKeyword(keyword, repeatedKey, len);
+
+    for (int i = 0; i < len; i++) {
+        if (cipher[i] >= 'a' && cipher[i] <= 'z') {
+            int c = cipher[i] - 'a';
+            int k = repeatedKey[i] - 'a';
+            plaintext[i] = (c - k + 26) % 26 + 'a';
+        } else {
+            plaintext[i] = cipher[i];
+        }
+    }
+    plaintext[len] = '\0';
+
 }
