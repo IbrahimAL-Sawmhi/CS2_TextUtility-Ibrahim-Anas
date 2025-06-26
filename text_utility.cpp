@@ -186,8 +186,6 @@ void reverse_string(char arr[])
 
 }
 
-const int MAX_LENGTH = 1000;
-
 void repeatKeyword(char keyword[], char repeat[], int length)
 {
     int keyLen = strlen(keyword);
