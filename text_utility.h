@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstring>
-
 using namespace std;
+
 
 int word_count(char arr[]);
 int char_Count(char arr[]);
@@ -13,7 +13,7 @@ void convert_Toupper(char arr[]);
 void convert_Tolower(char arr[]);
 void reverse_string(char arr[]);
 
-// The bouns task
+// The Bonus Task
 const int MAX_LENGTH = 1000;
 
 void repeatKeyword(char keyword[], char repeated[], int length);
