@@ -16,7 +16,7 @@ int main()
     cout << "Vowel count (should be 2): " << vowel_count(text3) << endl;
 
     // Test 4: consonant_count
-    cout << "Consonant count (should be 8): " << constant_count(text3) << endl;
+    cout << "Consonant count (should be 8): " << consonant_count(text3) << endl;
 
     // Test 5: palindrome_Check
     char text4[] = "RaceCar";
