@@ -1,3 +1,6 @@
+#include "text_utility.h"
+
+
 int main()
 {
     // Test 1: word_count
