@@ -6,7 +6,7 @@ using namespace std;
 int word_count(char arr[]);
 int char_Count(char arr[]);
 int vowel_count(char arr[]);
-int constant_count(char arr[]);
+int consonant_count(char arr[]);
 int sub_occur_Count(char arr[], char sub[]);
 bool palindrome_Check(char arr[]);
 void convert_Toupper(char arr[]);
