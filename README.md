@@ -23,6 +23,20 @@ The library includes the following string utility functions:
 -  Case conversion to lowercase (in-place)
 -  Substring occurrence count
 
+## Build
+
+To build the program, follow the steps:
+
+- Clone the repository on your local device using: git clone (the HTTPS link of this repo)
+- For CMake:
+- In the same folder you cloned the repo on, create a folder named build
+- Enter the file, then run this command: cmake ..
+- Build the project with this command: make
+- Run the program using this command: .\TextUtility
+- For G++:
+- Compile using: g++ main.cpp text_utility.cpp -o TextUtility
+- Then run the program: .\TextUtility (.\TextUtility.exe if on Windows)
+
 
 
 # Authors
